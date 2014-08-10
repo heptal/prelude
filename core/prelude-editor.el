@@ -166,15 +166,15 @@ The body of the advice is in BODY."
                commands)))
 
 ;; advise all window switching functions
-(advise-commands "auto-save"
-                 (switch-to-buffer other-window windmove-up windmove-down windmove-left windmove-right)
-                 before
-                 (prelude-auto-save-command))
+;; (advise-commands "auto-save"
+;;                  (switch-to-buffer other-window windmove-up windmove-down windmove-left windmove-right)
+;;                  before
+;;                  (prelude-auto-save-command))
 
-(add-hook 'mouse-leave-buffer-hook 'prelude-auto-save-command)
+;; (add-hook 'mouse-leave-buffer-hook 'prelude-auto-save-command)
 
-(when (version<= "24.4" emacs-version)
-  (add-hook 'focus-out-hook 'prelude-auto-save-command))
+;; (when (version<= "24.4" emacs-version)
+;;   (add-hook 'focus-out-hook 'prelude-auto-save-command))
 
 (defadvice set-buffer-major-mode (after set-major-mode activate compile)
   "Set buffer major mode according to `auto-mode-alist'."

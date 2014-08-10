@@ -36,7 +36,7 @@
 ;;; evil-visualstar enables searching visual selection with *
 ;;; evil-numbers enables vim style numeric incrementing and decrementing
 
-(prelude-require-packages '(evil goto-chg evil-surround evil-visualstar evil-numbers))
+(prelude-require-packages '(evil goto-chg evil-surround evil-visualstar evil-numbers evil-indent-textobject))
 
 (require 'evil-visualstar)
 
